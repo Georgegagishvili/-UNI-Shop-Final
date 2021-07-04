@@ -46,7 +46,7 @@ function NavBar() {
         </li>
 
         <li className="nav-item">
-          <NavLink to="somewhere1" className="nav-link" exact>
+          <NavLink to="/" className="nav-link" exact>
             <svg
               aria-hidden="true"
               focusable="false"
@@ -88,7 +88,7 @@ function NavBar() {
         </li>
 
         <li className="nav-item">
-          <NavLink to="somewhere3" className="nav-link">
+          <NavLink to="/cart" className="nav-link">
             <svg
               aria-hidden="true"
               focusable="false"

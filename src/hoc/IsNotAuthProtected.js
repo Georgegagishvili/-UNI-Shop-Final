@@ -4,7 +4,7 @@ import { Redirect } from "react-router";
 export const IsNotAuthProtected = (Component) => {
   const IsNotAuthProtected = (props) => {
     useEffect(() => {
-      console.log("accessing secured page");
+      console.log("//");
     }, []);
 
     const token = JSON.parse(localStorage.getItem("auth.token"));
