@@ -100,7 +100,7 @@ function NavBar() {
         <li className="nav-item" id="authbutton">
           <span className="link-text">
             <li className="nav-item">
-              <NavLink to="login.html" className="nav-link">
+              <NavLink to="auth" className="nav-link">
                 <svg
                   aria-hidden="true"
                   focusable="false"
