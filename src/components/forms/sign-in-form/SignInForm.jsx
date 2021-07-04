@@ -15,6 +15,7 @@ function SignInForm() {
     const loggedIn = await login(formData);
     localStorage.setItem("auth.token", JSON.stringify(loggedIn.token));
     history.replace("/");
+    window.location.reload();
   };
   return (
     <div>
@@ -32,7 +33,10 @@ function SignInForm() {
               {...register("email", { required: true })}
             />
             <div className="input-image-wrapper">
-              <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Message-Email-Mail-ICon-PNG.png" />
+              <img
+                src="https://www.searchpng.com/wp-content/uploads/2019/02/Message-Email-Mail-ICon-PNG.png"
+                alt="msg"
+              />
             </div>
           </div>
           {/* <!-- Single input end --> */}
@@ -47,7 +51,10 @@ function SignInForm() {
               {...register("password", { required: true })}
             />
             <div className="input-image-wrapper">
-              <img src="https://i.dlpng.com/static/png/6534587_preview.png" />
+              <img
+                src="https://i.dlpng.com/static/png/6534587_preview.png"
+                alt="psswrd"
+              />
             </div>
           </div>
           {/* <!-- Single input end --> */}
