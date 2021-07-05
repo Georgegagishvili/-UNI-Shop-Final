@@ -8,6 +8,7 @@ import CartPage from "./pages/cart-page/";
 
 import "./index.css";
 import "./App.css";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <CartPage></CartPage>
           </Route>
         </Switch>
+        <Footer></Footer>
       </ErrorBoundary>
     </div>
   );

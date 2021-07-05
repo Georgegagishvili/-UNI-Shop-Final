@@ -10,6 +10,7 @@ function ProductCard({ item, img }) {
       if (existingProducts == null) existingProducts = [];
       if (!existingProducts.find((o) => o.id === item.id)) {
         existingProducts.push(item);
+        item.count = 1;
       }
       localStorage.setItem("productIds", JSON.stringify(existingProducts));
     } else {

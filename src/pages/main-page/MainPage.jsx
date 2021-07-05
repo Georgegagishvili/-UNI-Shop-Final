@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../../components/products/product-card";
+import Banner from "../../components/banner";
 
 import "./mainpage-style.css";
 
@@ -25,6 +26,7 @@ function MainPage() {
           setItems(result.data);
         },
         (error) => {
+          window.location.reload();
           setIsLoaded(true);
           setError(error);
         }
@@ -44,6 +46,10 @@ function MainPage() {
   } else {
     return (
       <div>
+        <Banner></Banner>
+        <div className="header">
+          <p>Products</p>
+        </div>
         <div className="card-list">
           {items.map((item) => (
             <ProductCard

@@ -1,0 +1,71 @@
+.main-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  display: flex;
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: top;
+}
+.blurry-banner {
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(26, 5, 82, 0.2),
+    rgba(1, 3, 10, 0.9)
+  );
+}
+.banner-info {
+  height: 90%;
+  width: 80%;
+  position: relative;
+}
+.watch-featured {
+  width: 150px;
+  height: 40px;
+  border: none;
+  font-family: "Poppins";
+  font-weight: 900;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #3b8bc0;
+  color: #eef4ff;
+  transition: 0.2s;
+}
+.watch-featured:hover {
+  transition: 0.2s;
+  background-color: #7374ff;
+}
+
+.film-of-the-day {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  color: #ececec;
+  font-size: 1.4rem;
+  position: inherit;
+  top: 0;
+  left: 0;
+}
+.banner-movie-info {
+  display: flex;
+  flex-direction: column;
+  top: 80%;
+  position: relative;
+}
+.banner-title-georgian {
+  line-height: 20px;
+  font-size: 19px !important;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.banner-title-english {
+  line-height: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #eeecec;
+}
