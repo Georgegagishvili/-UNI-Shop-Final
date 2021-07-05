@@ -6,7 +6,7 @@ function SignInForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    // formState: { errors },
   } = useForm();
 
   const history = useHistory();
