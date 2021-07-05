@@ -2,13 +2,15 @@ import { Switch, Route } from "react-router-dom";
 
 import ErrorBoundary from "./components/error-boundary";
 import NavBar from "./components/navbar";
+
 import MainPage from "./pages/main-page";
 import AuthPage from "./pages/auth-page/";
 import CartPage from "./pages/cart-page/";
 
+import Footer from "./components/footer/Footer";
+
 import "./index.css";
 import "./App.css";
-import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <MainPage></MainPage>
+            <Footer></Footer>
           </Route>
           <Route path="/auth">
             <AuthPage></AuthPage>
@@ -26,7 +29,6 @@ function App() {
             <CartPage></CartPage>
           </Route>
         </Switch>
-        <Footer></Footer>
       </ErrorBoundary>
     </div>
   );

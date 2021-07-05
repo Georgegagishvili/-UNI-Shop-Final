@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { IsAuthProtected } from "../../hoc/IsAuthProtected";
+
+import CartTr from "../../components/tables/cart-tr/CartTr";
+
 import "./cart_style.css";
 
 function CartPage() {
@@ -14,7 +17,6 @@ function CartPage() {
       priceList.push(productList[i].employee_salary);
     }
   }
-
   const onRemove = (item) => {
     for (let i = 0; i < productList.length; i++) {
       if (item.id === productList[i].id) {
@@ -23,13 +25,12 @@ function CartPage() {
       }
     }
   };
-
   const onAdd = (item) => {
     console.log("work in progress");
   };
   if (productList) {
     return (
-      <div style={{ height: "100vh" }}>
+      <div>
         {productList.length > 0 && (
           <div>
             <div className="header">
@@ -50,18 +51,12 @@ function CartPage() {
                   {productList &&
                     productList.map((item) => {
                       return (
-                        <tr key={item.id}>
-                          <td className="column1">
-                            <a href="/">{item.employee_name}</a>
-                          </td>
-                          <td className="column2">
-                            <button onClick={() => onAdd(item)}>+</button>
-                            {item.count}
-                            <button onClick={() => onRemove(item)}>-</button>
-                          </td>
-                          <td className="column3">${item.employee_salary}</td>
-                          {/* <td className="column4"></td> */}
-                        </tr>
+                        <CartTr
+                          key={item.id}
+                          item={item}
+                          onAdd={onAdd}
+                          onRemove={onRemove}
+                        ></CartTr>
                       );
                     })}
                   {/* Example TR structure --> */}
@@ -87,7 +82,10 @@ function CartPage() {
           productList === null ||
           productList.length === null) && (
           <div className="cart_not_found">
-            <img src="https://img.pngio.com/free-rewards-on-groceries-fetch-rewards-products-png-1045_837.png"></img>
+            <img
+              src="https://img.pngio.com/free-rewards-on-groceries-fetch-rewards-products-png-1045_837.png"
+              alt="img"
+            ></img>
             <div className="header">
               <p>Your cart is empty!</p>
             </div>
@@ -98,7 +96,10 @@ function CartPage() {
   } else {
     return (
       <div className="cart_not_found">
-        <img src="https://img.pngio.com/free-rewards-on-groceries-fetch-rewards-products-png-1045_837.png"></img>
+        <img
+          src="https://img.pngio.com/free-rewards-on-groceries-fetch-rewards-products-png-1045_837.png"
+          alt="img"
+        ></img>
         <div className="header">
           <p>Your cart is empty!</p>
         </div>

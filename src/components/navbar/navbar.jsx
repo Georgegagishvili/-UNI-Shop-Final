@@ -67,7 +67,7 @@ function NavBar() {
         </li>
 
         <li className="nav-item">
-          <NavLink to="somewhere2" className="nav-link">
+          <NavLink to="/" exact className="nav-link">
             <svg
               aria-hidden="true"
               focusable="false"

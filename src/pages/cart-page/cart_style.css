@@ -193,8 +193,7 @@ body {
 }
 
 .cart_not_found {
-  height: 85%;
-  margin-top: 2%;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
