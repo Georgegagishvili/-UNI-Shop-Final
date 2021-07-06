@@ -15,7 +15,9 @@ function Banner({ img }) {
           <span className="banner-title-georgian">Lorem Ipsum dolor sit</span>
           <span className="banner-title-english">consectetur adipiscing</span>
           <button className="watch-featured">
-            <Link to={"/movie?id=8462"}>Add to cart</Link>
+            <Link to={`/product/id?=${Math.floor(Math.random() * 24)}`}>
+              See more
+            </Link>
           </button>
         </div>
       </div>

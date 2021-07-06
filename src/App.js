@@ -6,6 +6,7 @@ import NavBar from "./components/navbar";
 import MainPage from "./pages/main-page";
 import AuthPage from "./pages/auth-page/";
 import CartPage from "./pages/cart-page/";
+import SingleProductPage from "./pages/single-product-page/SingleProductPage";
 
 import Footer from "./components/footer/Footer";
 
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route path="/cart">
             <CartPage></CartPage>
+          </Route>
+          <Route path={`/product/id`}>
+            <SingleProductPage></SingleProductPage>
           </Route>
         </Switch>
       </ErrorBoundary>

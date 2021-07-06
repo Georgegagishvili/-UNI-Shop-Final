@@ -6,4 +6,5 @@ function AuthPage() {
   return <SignIn></SignIn>;
 }
 
-export default IsNotAuthProtected(AuthPage);
+// export default IsNotAuthProtected(AuthPage);
+export default AuthPage;
