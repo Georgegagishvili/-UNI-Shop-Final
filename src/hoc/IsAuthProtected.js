@@ -7,7 +7,7 @@ export const IsAuthProtected = (Component) => {
       console.log("You're logged in!");
     }, []);
 
-    const token = JSON.parse(localStorage.getItem("auth.token"));
+    const token = localStorage.getItem("auth.token");
     if (!token) return <Redirect to="/auth"></Redirect>;
 
     return <Component {...props}></Component>;

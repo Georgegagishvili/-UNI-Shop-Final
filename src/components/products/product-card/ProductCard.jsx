@@ -1,6 +1,6 @@
 import propTypes from "prop-types";
 import { memo } from "react/cjs/react.production.min";
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink, useHistory, Redirect } from "react-router-dom";
 
 import styles from "./product_style.module.css";
 
@@ -17,7 +17,7 @@ function ProductCard({ item, img }) {
       }
       localStorage.setItem("productIds", JSON.stringify(existingProducts));
     } else {
-      history.push("/auth");
+      return <Redirect to="/auth"></Redirect>;
     }
   };
 

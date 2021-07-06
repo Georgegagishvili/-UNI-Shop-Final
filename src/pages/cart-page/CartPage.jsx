@@ -108,5 +108,5 @@ function CartPage() {
   }
 }
 
-// export default IsAuthProtected(CartPage);
-export default CartPage;
+export default IsAuthProtected(CartPage);
+// export default CartPage;
