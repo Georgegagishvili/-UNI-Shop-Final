@@ -1,10 +1,11 @@
-import styles from "./product_style.module.css";
-
 import propTypes from "prop-types";
 import { memo } from "react/cjs/react.production.min";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
+
+import styles from "./product_style.module.css";
 
 function ProductCard({ item, img }) {
+  const history = useHistory();
   const toCart = () => {
     const token = JSON.parse(localStorage.getItem("auth.token"));
     if (token) {
@@ -16,7 +17,7 @@ function ProductCard({ item, img }) {
       }
       localStorage.setItem("productIds", JSON.stringify(existingProducts));
     } else {
-      window.location.replace("/auth");
+      history.push("/auth");
     }
   };
 
