@@ -52,7 +52,7 @@ function SignInForm() {
             />
             <div className="input-image-wrapper">
               <img
-                src="https://i.dlpng.com/static/png/6534587_preview.png"
+                src="https://www.freeiconspng.com/uploads/black-key-icon-7.png"
                 alt="psswrd"
               />
             </div>

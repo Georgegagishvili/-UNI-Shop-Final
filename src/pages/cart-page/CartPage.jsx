@@ -25,9 +25,32 @@ function CartPage() {
       }
     }
   };
+
   const onAdd = (item) => {
     console.log("work in progress");
   };
+
+  const placeOrder = () => {
+    var today = new Date(),
+      date =
+        today.getFullYear() +
+        "-" +
+        (today.getMonth() + 1) +
+        "-" +
+        today.getDate();
+    var Orders, OrderPrices, OrderTimes;
+    var storageList = [Orders, OrderPrices, OrderTimes];
+    var storageStrings = ["Orders", "OrderPrices", "OrderTimes"];
+    var pushList = [productList, priceList.reduce(reducer), date];
+    for (let i = 0; i < storageList.length; i++) {
+      storageList[i] = JSON.parse(localStorage.getItem(`${storageStrings[i]}`));
+      if (storageList[i] == null) storageList[i] = [];
+      storageList[i].push(pushList[i]);
+      localStorage.setItem(storageStrings[i], JSON.stringify(storageList[i]));
+    }
+    localStorage.removeItem("productIds");
+  };
+
   if (productList) {
     return (
       <div>
@@ -73,7 +96,9 @@ function CartPage() {
             </div>
             <div className="place_order_footer">
               <div className="place_order_button_wrapper">
-                <a href="/">Place Order</a>
+                <a onClick={placeOrder} href="/">
+                  Place Order
+                </a>
               </div>
             </div>
           </div>

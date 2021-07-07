@@ -15,7 +15,7 @@ function SingleProductPage() {
         <div class="product_card">
           {/* <!-- Left Side Image --> */}
           <div class="product_card_left">
-            <img src={itemIMG} />
+            <img src={itemIMG} alt="img" />
           </div>
           {/* <!-- Left Side Image --> */}
           {/* <!-- Right Side --> */}
