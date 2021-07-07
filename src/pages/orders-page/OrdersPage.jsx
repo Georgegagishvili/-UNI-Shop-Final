@@ -9,6 +9,9 @@ function OrdersPage() {
   return (
     <div className="orders-wrapper">
       <div className="orders-list">
+        <div className="header">
+          <p>ORDER LIST</p>
+        </div>
         <OrderList
           Orders={Orders}
           OrderPrices={OrderPrices}

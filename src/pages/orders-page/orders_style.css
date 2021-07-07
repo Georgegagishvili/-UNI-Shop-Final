@@ -1,11 +1,13 @@
 .single-order-wrapper {
-  display: flex;
+  border: 1px solid #fed700;
   flex-direction: column;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
 }
 
 .orders-wrapper {
   display: flex;
-  height: 100vh;
   justify-content: center;
   align-items: center;
 }
@@ -25,13 +27,13 @@
   font-size: 20px;
   color: white;
   display: flex;
-  border-radius: 10px;
-  border: 1px solid #fed700;
   justify-content: center;
   align-items: center;
 }
 
 .single-order img {
+  width: 100px;
+  height: 100px;
   border-radius: 10px;
 }
 
@@ -53,17 +55,18 @@
   margin-left: 50px;
 }
 
-.order-details {
+.orders-table {
   color: white;
-  display: flex;
-  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
+  border-top: 1px solid #fed700;
 }
 
-.none {
-  display: none;
+.orders-titles {
+  line-height: 30px;
+  color: #fc077b;
 }
-.yes {
-  display: flex;
 
-  color: white;
+.orders-td {
+  line-height: 25px;
 }
