@@ -41,7 +41,9 @@ function SingleOrder({ OrderPrices, orderDate, Orders, index }) {
               return (
                 <tr className="orders-tr-wrapper">
                   <td className="orders-td">{orderInfo.employee_name}</td>
-                  <td className="orders-td">{orderInfo.employee_salary}$</td>
+                  <td className="orders-td">
+                    {orderInfo.employee_salary}$(x{orderInfo.count})
+                  </td>
                   <td className="orders-td">{orderInfo.id}</td>
                 </tr>
               );

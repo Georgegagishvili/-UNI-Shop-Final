@@ -9,12 +9,11 @@ function CartPage() {
   // let i = 0; onAdd
   const productList = JSON.parse(localStorage.getItem("productIds"));
   const [products, setProducts] = useState(productList);
-  // const [count, setCount] = useState(productList[i].count); // onAdd
   const priceList = [];
   const reducer = (accumulator, curr) => accumulator + curr;
   if (productList !== null && productList.length > 0) {
     for (let i = 0; i < productList.length; i++) {
-      priceList.push(productList[i].employee_salary);
+      priceList.push(productList[i].employee_salary * productList[i].count);
     }
   }
   const onRemove = (item) => {
@@ -25,11 +24,6 @@ function CartPage() {
       }
     }
   };
-
-  const onAdd = (item) => {
-    console.log("work in progress");
-  };
-
   const placeOrder = () => {
     var today = new Date(),
       date =
@@ -77,8 +71,8 @@ function CartPage() {
                         <CartTr
                           key={item.id}
                           item={item}
-                          onAdd={onAdd}
                           onRemove={onRemove}
+                          productList={productList}
                         ></CartTr>
                       );
                     })}
