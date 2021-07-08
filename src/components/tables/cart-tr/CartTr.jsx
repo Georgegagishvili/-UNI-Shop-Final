@@ -1,5 +1,5 @@
 import { useState } from "react";
-function CartTr({ item, onRemove, productList }) {
+function CartTr({ item, onRemove, productList, setFullPrice, afullprice }) {
   const [count, setCount] = useState(item.count);
   const onAdd = (value) => {
     setCount(count + value);
@@ -15,6 +15,7 @@ function CartTr({ item, onRemove, productList }) {
         return;
       }
     }
+    setFullPrice(item.employee_salary * item.count);
   };
 
   return (

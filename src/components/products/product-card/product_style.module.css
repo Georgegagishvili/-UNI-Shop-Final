@@ -47,6 +47,7 @@ button {
   font-size: 17px;
   border-radius: 5px;
   transition: 0.6s;
+  cursor: pointer;
 }
 .card_left button:hover {
   transition: 0.5s;

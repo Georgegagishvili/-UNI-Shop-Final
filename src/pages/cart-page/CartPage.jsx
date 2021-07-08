@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { IsAuthProtected } from "../../hoc/IsAuthProtected";
 
 import CartTr from "../../components/tables/cart-tr/CartTr";
@@ -6,9 +6,9 @@ import CartTr from "../../components/tables/cart-tr/CartTr";
 import "./cart_style.css";
 
 function CartPage() {
-  // let i = 0; onAdd
   const productList = JSON.parse(localStorage.getItem("productIds"));
   const [products, setProducts] = useState(productList);
+  const [afullPrice, setFullPrice] = useState(0);
   const priceList = [];
   const reducer = (accumulator, curr) => accumulator + curr;
   if (productList !== null && productList.length > 0) {
@@ -73,6 +73,8 @@ function CartPage() {
                           item={item}
                           onRemove={onRemove}
                           productList={productList}
+                          afullPrice={afullPrice}
+                          setFullPrice={setFullPrice}
                         ></CartTr>
                       );
                     })}
