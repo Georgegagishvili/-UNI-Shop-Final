@@ -27,8 +27,19 @@
   font-size: 20px;
   color: white;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.single-order button {
+  border: none;
+  padding: 10px;
+  background: none;
+  color: #fc077b;
+  width: 100px;
+  font-size: 1rem;
+  font-family: "Raleway";
 }
 
 .single-order img {
@@ -58,7 +69,6 @@
 .orders-table {
   color: white;
   margin-bottom: 20px;
-  text-align: center;
   border-top: 1px solid #fed700;
 }
 
@@ -66,7 +76,41 @@
   line-height: 30px;
   color: #fc077b;
 }
+.orders-titles th {
+  width: 33%;
+}
 
 .orders-td {
+  width: 33%;
+  padding: 0px 10px;
+  text-align: center;
   line-height: 25px;
+}
+.orders-td:nth-child(2),
+.orders-td:nth-child(3) {
+  border-left: 1px solid #fed700;
+}
+@media only screen and (max-width: 800px) {
+  .single-order {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50vw;
+  }
+  .order-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .order-info span {
+    margin: 5px;
+  }
+  .orders-titles {
+    line-height: 20px;
+  }
+  .orders-td:nth-child(1) {
+    padding-top: 10px;
+  }
 }

@@ -31,8 +31,8 @@ function SingleOrder({ OrderPrices, orderDate, Orders, index }) {
           <thead>
             <tr className="orders-titles">
               <th>Product Name</th>
-              <th>Product Price</th>
-              <th>Product ID</th>
+              <th>Price</th>
+              <th>ID</th>
             </tr>
           </thead>
           <tbody>
